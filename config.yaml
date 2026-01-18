@@ -1,0 +1,58 @@
+# Cloud Engineer Bootcamp - Configuration
+
+# AI Provider Settings
+ai_provider: "openai"  # Options: openai, anthropic, ollama
+openai_model: "gpt-4"
+anthropic_model: "claude-3-sonnet-20240229"
+ollama_model: "llama2"
+
+# Learning Settings
+daily_schedule:
+  morning_start: "09:00"
+  morning_end: "11:00"
+  afternoon_start: "14:00"
+  afternoon_end: "17:00"
+  evening_start: "19:00"
+  evening_end: "20:00"
+
+# Progress Tracking
+progress_file: "progress/user_progress.json"
+enable_streaks: true
+enable_badges: true
+
+# Assessment Settings
+passing_score: 70  # Percentage
+assessment_attempts: 3
+
+# Curriculum Settings
+total_weeks: 8
+days_per_week: 5
+start_week: 1
+start_day: 1
+
+# Features
+enable_daily_standup: true
+enable_interview_prep: true
+enable_portfolio_tracking: true
+enable_motivation: true
+
+# Cloud Provider Preference
+primary_cloud_provider: "aws"  # Options: aws, azure, gcp
+
+# Difficulty Adaptation
+adaptive_learning: true
+difficulty_adjustment_threshold: 0.7
+
+# Resources
+resource_categories:
+  - documentation
+  - videos
+  - tutorials
+  - practice_labs
+  - cheatsheets
+
+# User Interface
+interface: "cli"  # Options: cli, web, jupyter
+theme: "dark"
+show_ascii_art: true
+verbose_mode: false
