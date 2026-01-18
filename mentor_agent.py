@@ -62,7 +62,7 @@ class MentorAgent:
     def _load_config(self) -> Dict[str, Any]:
         """Load configuration from config.yaml."""
         config_path = BASE_DIR / "config.yaml"
-        with open(config_path, 'r') as f:
+        with open(config_path, 'r', encoding='utf-8') as f:
             return yaml.safe_load(f)
     
     def _initialize_ai_client(self):
@@ -174,7 +174,7 @@ class MentorAgent:
         curriculum_file = BASE_DIR / "curriculum" / f"week{week}" / f"day{day}.md"
         
         if curriculum_file.exists():
-            with open(curriculum_file, 'r') as f:
+            with open(curriculum_file, 'r', encoding='utf-8') as f:
                 return f.read()
         return None
     
@@ -341,7 +341,7 @@ def assess(week: int = typer.Option(1, help="Week number for assessment")):
     
     console.print(f"\n[bold cyan]📝 Week {week} Assessment[/bold cyan]\n")
     
-    with open(assessment_file, 'r') as f:
+    with open(assessment_file, 'r', encoding='utf-8') as f:
         content = f.read()
         console.print(Markdown(content))
     
@@ -439,7 +439,7 @@ def resources(topic: str = typer.Option("", help="Specific topic to find resourc
     resources_file = BASE_DIR / "resources" / "links.md"
     
     if resources_file.exists():
-        with open(resources_file, 'r') as f:
+        with open(resources_file, 'r', encoding='utf-8') as f:
             content = f.read()
             console.print(Markdown(content))
     else:

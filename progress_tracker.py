@@ -44,12 +44,12 @@ class ProgressTracker:
     
     def _load_progress(self) -> Dict[str, Any]:
         """Load progress from JSON file."""
-        with open(self.progress_file, 'r') as f:
+        with open(self.progress_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     
     def _save_progress(self, progress: Dict[str, Any]):
         """Save progress to JSON file."""
-        with open(self.progress_file, 'w') as f:
+        with open(self.progress_file, 'w', encoding='utf-8') as f:
             json.dump(progress, f, indent=2)
     
     def initialize_progress(self, user_name: str):
